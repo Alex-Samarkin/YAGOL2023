@@ -24,11 +24,18 @@ namespace YAGOL2023
 
         public Field Field { get; set; } = new Field();
 
+        private Color color1 = Color.Plum;
+        private Color color2 = Color.Pink;
+
         private void button1_Click(object sender, EventArgs e)
         {
             var g = panel1.CreateGraphics();
-            g.Clear(Color.AliceBlue);
-            Field.Paint(g);
+            /// g.Clear(Color.AliceBlue);
+            g.Clear(color1);
+            
+            var pen = new Pen(color2);
+
+            Field.Paint(g,pen);
             g.Dispose();
             Field.Update();
         }
@@ -68,6 +75,19 @@ namespace YAGOL2023
                 button1_Click(sender, e);
                 progressBar1.Increment(1);
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // this.colorDialog1 = new ColorDialog();
+            colorDialog1.ShowDialog();
+            color1 = this.colorDialog1.Color;
+        }
+        
+        private void button7_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            color2 = this.colorDialog1.Color;
         }
     }
 }

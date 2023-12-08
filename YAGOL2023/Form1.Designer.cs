@@ -41,6 +41,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +86,8 @@
             this.flowLayoutPanel1.Controls.Add(this.numericUpDown2);
             this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Controls.Add(this.progressBar1);
+            this.flowLayoutPanel1.Controls.Add(this.button6);
+            this.flowLayoutPanel1.Controls.Add(this.button7);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -219,6 +224,30 @@
             this.panel1.Size = new System.Drawing.Size(600, 600);
             this.panel1.TabIndex = 0;
             // 
+            // colorDialog1
+            // 
+            this.colorDialog1.Color = System.Drawing.Color.DarkSlateBlue;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(3, 342);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(137, 23);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Цвет фона";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(3, 371);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(137, 23);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Цвет фигуры";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -258,6 +287,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
